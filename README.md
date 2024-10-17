@@ -1,17 +1,22 @@
-# Simple Todo App
+# My Todo App
 
-Give a brief description of the project here. Feel free to give it a different name.
+In this project titled My Todo App, I created a simple way for users to organize their tasks so that they can keep up with the busy world around them.
 
 ## Functionality
 
-Give a more detailed explanation of the project and its functionality.
+This project lets users input their own tasks in a form and gives them an option of setting a completion time in date format. 
+after the goal is set, the user has the ability to check the task off, and/or delete the task.
 
 ## Technology
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+the technologies used in this project are:
+-HTML
+-CSS
+-javascript
+the Javascript was used to validate forms, provide form popups, and input dates next to the task elements.
 
 ## Deployment
 
 This project is deployed on GitHub Pages:
 
-- ADD LINK HERE
+- https://prophet-of-tears.github.io/se_project_todo-app/

@@ -9,7 +9,6 @@ const addTodoButton = document.querySelector(".button_action_add");
 const addTodoPopup = document.querySelector("#add-todo-popup");
 const addTodoForm = addTodoPopup.querySelector(".popup__form");
 const addTodoCloseBtn = addTodoPopup.querySelector(".popup__close");
-const todoTemplate = document.querySelector("#todo-template");
 const todosList = document.querySelector(".todos__list");
 
 const openModal = (modal) => {
@@ -29,31 +28,10 @@ const generateTodo = (data) => {
   const todoElement = todo.getView(data);
 
 return todoElement;
-//   todoNameEl.textContent = data.name;
-//   todoCheckboxEl.checked = data.completed;
 
-//   // Apply id and for attributes.
-//   // The id will initially be undefined for new todos.
-//   todoCheckboxEl.id = `todo-${data.id}`;
-//   todoLabel.setAttribute("for", `todo-${data.id}`);
+}
 
-//   // If a due date has been set, parsing this it with `new Date` will return a
-//   // number. If so, we display a string version of the due date in the todo.
-//   const dueDate = new Date(data.date);
-//   if (!isNaN(dueDate)) {
-//     todoDate.textContent = `Due: ${dueDate.toLocaleString("en-US", {
-//       year: "numeric",
-//       month: "short",
-//       day: "numeric",
-//     })}`;
-   }
 
-//   todoDeleteBtn.addEventListener("click", () => {
-//     todoElement.remove();
-//   });
-
-//   return todoElement;
-// };
 
 addTodoButton.addEventListener("click", () => {
   openModal(addTodoPopup);
@@ -76,7 +54,7 @@ addTodoForm.addEventListener("submit", (evt) => {
   const todo = generateTodo(values);
   todosList.append(todo);
   closeModal(addTodoPopup);
-  resetValidation();
+  newTodoValidator.resetValidation();
 });
 
 initialTodos.forEach((item) => {
@@ -87,4 +65,3 @@ initialTodos.forEach((item) => {
 const newTodoValidator = new FormValidator(validationConfig, addTodoForm);
 
 newTodoValidator.enableValidation(FormValidator);
-//newTodoValidator.resetValidation(FormValidator);

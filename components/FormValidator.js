@@ -74,11 +74,16 @@ class FormValidator{
     }
 
      resetValidation(){
-        const inputElement = document.querySelector(".popup__input");
+        const inputList =Array.from(document.querySelectorAll(".popup__input"));
         const buttonElement = document.querySelector(".popup__button");
+        const formElement = document.querySelector(".popup__form");
 
-        inputElement.value = "";
-        buttonElement.disabled = true;
+        inputList.forEach((inputElement) => {
+          inputElement.value = "";
+          this._checkInputValidity(inputElement);
+          this._hideInputError(formElement, inputElement);
+        });
+        this._toggleButtonState(inputList, buttonElement);
     }
 
     enableValidation(){

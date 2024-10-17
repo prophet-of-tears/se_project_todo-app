@@ -32,8 +32,17 @@ class Todo{
     this._todoLabel.setAttribute("for", `todo-${this._data.id}`);
     this.setEventListeners();
 
+    const dueDate = new Date(this._data.date);
+  if (!isNaN(dueDate)) {
+    this._todoDate.textContent = `Due: ${dueDate.toLocaleString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    })}`;
+
     return this._todoElement;
   }
-}
 
+ }
+}
   export default Todo;
