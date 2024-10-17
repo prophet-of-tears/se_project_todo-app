@@ -1,18 +1,5 @@
-const showInputError = (formElement, inputElement, errorMessage, settings) => {
-  const errorElementId = `#${inputElement.id}-error`;
-  const errorElement = formElement.querySelector(errorElementId);
-  inputElement.classList.add(settings.inputErrorClass);
-  errorElement.textContent = errorMessage;
-  errorElement.classList.add(settings.errorClass);
-};
+// THIS NEEDS TO BE DELETED BEFORE I SUBMIT THE PROJECT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! AND THE DIRECTORY!!!
 
-const hideInputError = (formElement, inputElement, settings) => {
-  const errorElementId = `#${inputElement.id}-error`;
-  const errorElement = formElement.querySelector(errorElementId);
-  inputElement.classList.remove(settings.inputErrorClass);
-  errorElement.classList.remove(settings.errorClass);
-  errorElement.textContent = "";
-};
 
 const checkInputValidity = (formElement, inputElement, settings) => {
   if (!inputElement.validity.valid) {
