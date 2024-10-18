@@ -35,6 +35,7 @@ return todoElement;
 
 addTodoButton.addEventListener("click", () => {
   openModal(addTodoPopup);
+  
 });
 
 addTodoCloseBtn.addEventListener("click", () => {
